@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GameStart = () => (
-  <div></div>
+  <button>Start!</button>
 );
 
 export default GameStart;
