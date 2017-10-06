@@ -1,13 +1,13 @@
 import React from 'react';
 import Welcome from './Welcome.jsx';
 import Game from './Game.jsx';
-import StartGame from './StartGame.jsx';
+import GameStart from './GameStart.jsx';
 
-class Body extends React.component {
+class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      gameStarted = false;
+      gameStarted: false
     }
 
     this.handleStart = this.handleStart.bind(this);
@@ -20,12 +20,14 @@ class Body extends React.component {
   render() {
     return (
       <div id='body'>
-        { this.state.gameStarted ? {
+        { this.state.gameStarted ? 
             <Game />
-          } : {
-            <Welcome handleStart={this.handleStart} />
-            <GameStart />
-        }}
+           : 
+            <div>
+              <Welcome handleStart={this.handleStart} />
+              <GameStart />
+            </div>
+        }
       </div>
     )
   }

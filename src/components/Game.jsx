@@ -2,14 +2,14 @@ import React from 'react';
 import Pokemon from './Pokemon.jsx';
 import Options from './Options.jsx';
 import Lost from './Lost.jsx';
-import GameStart from './StartGame.jsx';
+import GameStart from './GameStart.jsx';
 
-class Game extends React.component {
+class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isCorrect = true;
-      currentPokemon = 1;
+      isCorrect: true,
+      currentPokemon: 1
     }
   }
 
@@ -19,18 +19,21 @@ class Game extends React.component {
 
   render() {
     return (
-      <div id='game'>
-        { this.state.isCorrect ? {
+      <div className='game'>
+        { this.state.isCorrect ? 
+          <div className='active'>
             <Pokemon current='this.state.currentPokemon' />
             <Options />
-          } : {
+          </div>
+           : 
+          <div className='lost'>
             <Lost />
             <GameStart />
-          }
+          </div>
         }
       </div>
     )
   }
 }
 
-export default Body;
+export default Game;

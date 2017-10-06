@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path');
 
 module.exports = {
   entry: './src/App.jsx',
@@ -7,9 +7,18 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+    rules: [
+      { test: /\.(js|jsx)$/,
+        include: path.join(__dirname, 'client/src'),
+        exclude: ['node_modules'],
+        use: [
+          { loader: 'babel-loader',
+            options: {
+              presets: ['react', 'es2015', 'stage-2']
+            }
+          }
+        ]
+      }
     ]
   }
 }
