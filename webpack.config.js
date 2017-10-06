@@ -9,12 +9,12 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(js|jsx)$/,
-        include: path.join(__dirname, 'client/src'),
+        include: path.join(__dirname, 'src'),
         exclude: ['node_modules'],
         use: [
           { loader: 'babel-loader',
             options: {
-              presets: ['react', 'es2015', 'stage-2']
+              presets: ['react', 'es2015', 'env']
             }
           }
         ]
