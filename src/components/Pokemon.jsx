@@ -8,7 +8,7 @@ const Pokemon = ({ current, isCorrect }) => (
         <img src={'/assets/' + current + '.png'} />
       ) : (
         <div>
-          <img src={'/assets/' + current + '.png'} />
+          <img className='lost' src={'/assets/' + current + '.png'} />
           <div>The answer was {PokemonList[current]}! Play again?</div>
         </div>
       )
