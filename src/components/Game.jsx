@@ -36,6 +36,7 @@ class Game extends React.Component {
       });
     } else {
       if (pokeIdx === this.state.currentPokemon) { //if correct
+        //@TODO: improve next Pokemon generation, e.g. choose an evolution every few cycles
         let nextPoke = Math.ceil(Math.random() * totalPokes);
         while (this.state.seenPokemon[nextPoke]) { nextPoke = Math.ceil(Math.random() * totalPokes); }
         let seenCopy = Object.assign({}, this.state.seenPokemon);

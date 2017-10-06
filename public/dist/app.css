@@ -19,8 +19,15 @@
   margin: 0 auto;
 }
 
+.game-start {
+  width: 20vw;
+  height: 30px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
 .message {
-  margin: 30px;
+  margin: 20px auto;
 }
 
 .option {
@@ -41,9 +48,13 @@
   height: 30vh;
 }
 
-.pokemon img {
+img {
   height: 200px;
   width: 200px;
+  margin-top: 10px;
+}
+
+.pokemon img {
   -webkit-filter: contrast(0%) brightness(0%);
   filter: contrast(0%) brightness(0%);
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 
+//@TODO: randomize start messages?
 const GameStart = ({ handleStart }) => (
-  <button onClick={handleStart}>Start!</button>
+  <button className='game-start' onClick={handleStart}>I wanna be the very best!</button>
 );
 
 export default GameStart;
