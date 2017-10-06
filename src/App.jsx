@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Body from './components/Body.jsx';
+import Game from './components/Game.jsx';
 
-class App extends React.Component {
-  render() {
-    return ( 
-      <div id='app'>
-        <div className="title">Who's that Pokemon?</div>
-        <Body />
-        <div>copyright disclaimer here</div>
-      </div>
-    )
-  }
-}
+const App = () => (
+  <div id='app'>
+    <div className="title">Who's that Pokemon?</div>
+    <Game />
+    <div>copyright disclaimer here</div>
+  </div>
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
